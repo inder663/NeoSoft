@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Carousel View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CarouselViewController" id="BYZ-38-t0r" customClass="CarouselViewController" customModule="NeoSoft_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JcQ-Mq-kO3">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Uvk-gd-CdO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vZx-fL-r0L"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9U-AV-TQ7">
+                                <rect key="frame" x="313" y="738" width="70" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="threeDots" translatesAutoresizingMaskIntoConstraints="NO" id="fnE-Hq-DHa">
+                                        <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paZ-g0-29M">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="floatingButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atU-ow-9WH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.5568627451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="paZ-g0-29M" firstAttribute="top" secondItem="r9U-AV-TQ7" secondAttribute="top" id="45e-n1-zr5"/>
+                                    <constraint firstAttribute="trailing" secondItem="paZ-g0-29M" secondAttribute="trailing" id="7df-Pp-0Mg"/>
+                                    <constraint firstItem="paZ-g0-29M" firstAttribute="leading" secondItem="r9U-AV-TQ7" secondAttribute="leading" id="G9y-OY-DvO"/>
+                                    <constraint firstAttribute="bottom" secondItem="paZ-g0-29M" secondAttribute="bottom" id="GbL-tI-Mzq"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnE-Hq-DHa" secondAttribute="trailing" constant="15" id="M1o-TR-Kzc"/>
+                                    <constraint firstAttribute="bottom" secondItem="fnE-Hq-DHa" secondAttribute="bottom" constant="15" id="NrJ-VW-wAE"/>
+                                    <constraint firstItem="fnE-Hq-DHa" firstAttribute="top" secondItem="r9U-AV-TQ7" secondAttribute="top" constant="15" id="ONh-TS-6a1"/>
+                                    <constraint firstAttribute="width" constant="70" id="Tev-dG-CI0"/>
+                                    <constraint firstItem="fnE-Hq-DHa" firstAttribute="leading" secondItem="r9U-AV-TQ7" secondAttribute="leading" constant="15" id="mMM-01-S6e"/>
+                                    <constraint firstAttribute="height" constant="70" id="vpn-nf-KNV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JcQ-Mq-kO3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5a5-c1-AFK"/>
+                            <constraint firstItem="JcQ-Mq-kO3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ES-ue-orO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcQ-Mq-kO3" secondAttribute="trailing" id="NIQ-fP-hTN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r9U-AV-TQ7" secondAttribute="trailing" constant="10" id="eES-IJ-OZt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JcQ-Mq-kO3" secondAttribute="bottom" id="jCW-EY-dez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r9U-AV-TQ7" secondAttribute="bottom" constant="10" id="uib-rZ-VO0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="JcQ-Mq-kO3" id="Cuo-L9-dTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="threeDots" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
